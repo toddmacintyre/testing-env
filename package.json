@@ -1,0 +1,29 @@
+{
+  "name": "testing-env",
+  "version": "0.1.0",
+  "description": "Jest testing environment",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/toddmacintyre/testing-env.git"
+  },
+  "author": "Todd MacIntyre",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/toddmacintyre/testing-env/issues"
+  },
+  "homepage": "https://github.com/toddmacintyre/testing-env#readme",
+  "babel": {
+    "presets": "./.babelrc.js"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "jest": "^23.4.1"
+  },
+  "scripts": {
+    "test": "jest --watch"
+  }
+}
