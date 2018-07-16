@@ -1,3 +1,5 @@
+import memoize from './memoize';
+
 const factorial = (n) => {
   if (n === 1 || n === 2) {
     return n;
@@ -33,7 +35,15 @@ const memoizedFactorial = (function() {
   };
 })();
 
+const factorialRecursive = memoize((n) => {
+  if (n <= 1) {
+    return 1;
+  }
+  return n * factorialRecursive(n-1);
+});
+
 export {
   factorial,
   memoizedFactorial,
+  factorialRecursive,
 };

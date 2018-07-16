@@ -1,4 +1,4 @@
-import {factorial, memoizedFactorial} from './factorial';
+import {factorial, memoizedFactorial, factorialRecursive} from './factorial';
 
 describe('factorial', () => {
   it('should return the factorial result of a given number', () => {
@@ -22,5 +22,12 @@ describe('factorial', () => {
     expect(spy.mock.calls.length).toBe(0);
     memoizedFactorial(9, spy);
     expect(spy.mock.calls.length).toBe(1);
+  });
+  it('should return the correct result using the recursive approach', () => {
+    expect(factorialRecursive(1)).toEqual(1);
+    expect(factorialRecursive(2)).toEqual(2);
+    expect(factorialRecursive(3)).toEqual(6);
+    expect(factorialRecursive(5)).toEqual(120);
+    expect(factorialRecursive(17)).toEqual(355687428096000);
   });
 });
